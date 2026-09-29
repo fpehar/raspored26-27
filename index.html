@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Raspored nastave 2026./2027. – Odjel za informacijske znanosti i tehnologije</title>
+<meta name="description" content="Kalendari rasporeda nastave po godinama studija. Pretplatite se jednom i promjene stižu sama u vaš kalendar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%85%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #F3F6F8;
+    --ink: #0E2230;
+    --muted: #4A6272;
+    --line: #CBD8E0;
+    --sea: #0A6C8F;
+    --sea-hover: #08536F;
+    --on-sea: #FFFFFF;
+    --note-bg: #FFF3D1;
+    --note-ink: #5C3F00;
+    --note-line: #D9A82B;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 1.0625rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
+
+  h1, h2, .year b {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    font-weight: 600;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 9vw, 3.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+  .dept { margin: 0.75rem 0 0; color: var(--muted); }
+  .lead { margin: 1.75rem 0 0; font-size: 1.1875rem; max-width: 34rem; }
+
+  h2 { margin: 3rem 0 0.5rem; font-size: 1.5rem; line-height: 1.2; }
+  .group { margin: 2.25rem 0 0.25rem; font-family: inherit; font-size: 1rem; font-weight: 650; color: var(--muted); }
+
+  ul.cals { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+  .cal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1rem;
+    padding: 0.875rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .year { display: flex; align-items: baseline; gap: 0.4rem; }
+  .year b { font-size: 2.25rem; line-height: 1; font-variant-numeric: lining-nums; }
+  .year span { color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.5rem 1.1rem;
+    border: 2px solid var(--sea);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--sea);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .btn:hover { border-color: var(--sea-hover); color: var(--sea-hover); }
+  .btn.primary { background: var(--sea); color: var(--on-sea); }
+  .btn.primary:hover { background: var(--sea-hover); border-color: var(--sea-hover); color: var(--on-sea); }
+  .btn:focus-visible, summary:focus-visible { outline: 3px solid var(--sea); outline-offset: 3px; }
+  .btn[hidden] { display: none; }
+  @media (max-width: 30rem) {
+    .actions { width: 100%; }
+    .actions .btn { flex: 1 1 0; }
+  }
+
+  p { margin: 0.75rem 0 0; max-width: 36rem; }
+  .note {
+    margin: 1.25rem 0 0.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid var(--note-line);
+    background: var(--note-bg);
+    color: var(--note-ink);
+    max-width: 36rem;
+  }
+  .note p { margin: 0; }
+
+  details { border-top: 1px solid var(--line); }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary {
+    position: relative;
+    padding: 0.9rem 2rem 0.9rem 0;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "";
+    position: absolute;
+    right: 0.4rem;
+    top: 50%;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.15s;
+  }
+  details[open] > summary::after { transform: translateY(-30%) rotate(-135deg); }
+  details p { margin: 0 0 1rem; }
+  code { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 0.95em; }
+
+  .sr {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Raspored nastave</h1>
+    <p class="dept">Odjel za informacijske znanosti i tehnologije, akad. god. 2026./2027.</p>
+    <p class="lead">Pretplatite se jednom na kalendar svoje godine. Kad se raspored promijeni, promjena sama stiže u vaš kalendar.</p>
+  </header>
+
+  <!--
+    Kako dodati ili ukloniti kalendar:
+    - Svaki redak <li class="cal"> ima data-file (ime .ics datoteke u istoj mapi) i data-label (za čitače zaslona).
+    - Adrese i webcal:// poveznice stranica sama slaže iz data-file, pa radi i ako se promijeni adresa (domena).
+    - Kad datoteka postoji u repozitoriju, izbrišite oznake komentara oko odgovarajućeg bloka.
+  -->
+
+  <section aria-labelledby="h-pds">
+    <h2 class="group" id="h-pds">Preddiplomski studij</h2>
+    <ul class="cals">
+      <li class="cal" data-file="pds-1g.ics" data-label="Preddiplomski studij, 1. godina">
+        <span class="year"><b>1.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="pds-1g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+      <li class="cal" data-file="pds-2g.ics" data-label="Preddiplomski studij, 2. godina">
+        <span class="year"><b>2.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="pds-2g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+      <li class="cal" data-file="pds-3g.ics" data-label="Preddiplomski studij, 3. godina">
+        <span class="year"><b>3.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="pds-3g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-dsred">
+    <h2 class="group" id="h-dsred">Diplomski studij, redovni</h2>
+    <ul class="cals">
+      <li class="cal" data-file="ds-red-1g.ics" data-label="Diplomski studij redovni, 1. godina">
+        <span class="year"><b>1.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="ds-red-1g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+      <li class="cal" data-file="ds-red-2g.ics" data-label="Diplomski studij redovni, 2. godina">
+        <span class="year"><b>2.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="ds-red-2g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <!--
+  <section aria-labelledby="h-dsizv">
+    <h2 class="group" id="h-dsizv">Diplomski studij, izvanredni</h2>
+    <ul class="cals">
+      <li class="cal" data-file="ds-izv-1g.ics" data-label="Diplomski studij izvanredni, 1. godina">
+        <span class="year"><b>1.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="ds-izv-1g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+      <li class="cal" data-file="ds-izv-2g.ics" data-label="Diplomski studij izvanredni, 2. godina">
+        <span class="year"><b>2.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="ds-izv-2g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-dok">
+    <h2 class="group" id="h-dok">Doktorski studij</h2>
+    <ul class="cals">
+      <li class="cal" data-file="dok-1g.ics" data-label="Doktorski studij, 1. godina">
+        <span class="year"><b>1.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="dok-1g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+      <li class="cal" data-file="dok-2g.ics" data-label="Doktorski studij, 2. godina">
+        <span class="year"><b>2.</b> <span>godina</span></span>
+        <span class="actions">
+          <a class="btn primary subscribe" href="dok-2g.ics">Pretplati se</a>
+          <button class="btn copy" type="button" hidden>Kopiraj adresu</button>
+        </span>
+      </li>
+    </ul>
+  </section>
+  -->
+
+  <h2>Kako dodati kalendar</h2>
+  <p>Gumb Pretplati se najlakše radi na iPhoneu, iPadu i Macu. Na ostalim uređajima kopirajte adresu i zalijepite je u kalendar prema uputama niže.</p>
+
+  <div class="note">
+    <p><strong>Odaberite pretplatu, ne uvoz.</strong> Ako datoteku samo uvezete (opcija Uvezi ili Import), dobit ćete jednokratnu kopiju koja se više neće mijenjati.</p>
+  </div>
+
+  <details>
+    <summary>iPhone, iPad i Mac</summary>
+    <p>Dodirnite Pretplati se i potvrdite pretplatu. Ako se ništa ne dogodi, kopirajte adresu i u aplikaciji Kalendar potražite opciju za pretplatu na kalendar (na Macu: Datoteka → Nova pretplata na kalendar).</p>
+  </details>
+  <details>
+    <summary>Outlook</summary>
+    <p>Kopirajte adresu. U Outlooku na webu ili u novom Outlooku otvorite Kalendar, odaberite Dodaj kalendar, zatim Pretplata s weba. Zalijepite adresu, upišite naziv kalendara i potvrdite. Nazivi opcija mogu se malo razlikovati ovisno o verziji.</p>
+  </details>
+  <details>
+    <summary>Google Calendar i Android</summary>
+    <p>Pretplata se dodaje na računalu. Kopirajte adresu, otvorite <code>calendar.google.com</code>, pokraj naslova Ostali kalendari kliknite +, odaberite Iz URL-a, zalijepite adresu i kliknite Dodaj kalendar. Kalendar se zatim pojavi i u aplikaciji na Androidu ako ste prijavljeni istim Google računom. U mobilnoj aplikaciji adresu nije moguće dodati.</p>
+  </details>
+
+  <h2>Koliko brzo stižu promjene</h2>
+  <p>Obično u roku nekoliko sati, a Google Calendar ponekad treba i dulje. Hitne promjene, na primjer promjenu dvorane za isti dan, javljamo i uobičajenim kanalima odsjeka.</p>
+
+  <div class="sr" role="status" aria-live="polite" id="live"></div>
+</main>
+
+<script>
+(function () {
+  var live = document.getElementById('live');
+  document.querySelectorAll('.cal').forEach(function (row) {
+    var file = row.getAttribute('data-file');
+    var label = row.getAttribute('data-label');
+    var url = new URL(file, window.location.href).href;
+    var sub = row.querySelector('.subscribe');
+    var copy = row.querySelector('.copy');
+
+    sub.href = url.replace(/^https?:/, 'webcal:');
+    sub.setAttribute('aria-label', 'Pretplati se: ' + label);
+    copy.hidden = false;
+    copy.setAttribute('aria-label', 'Kopiraj adresu: ' + label);
+
+    copy.addEventListener('click', function () {
+      var done = function () {
+        copy.textContent = 'Adresa kopirana';
+        live.textContent = 'Adresa kopirana: ' + label;
+        setTimeout(function () { copy.textContent = 'Kopiraj adresu'; }, 2500);
+      };
+      var manual = function () { window.prompt('Kopirajte adresu:', url); };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(done, manual);
+      } else {
+        manual();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
