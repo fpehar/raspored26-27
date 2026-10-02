@@ -1,4 +1,4 @@
-# Raspored nastave na Odjelu za informacijske znanosti i tehnologije, akad. god. 2026./2027.
+# raspored26-27
 
 Raspored nastave na Odjelu za informacijske znanosti i tehnologije, akad. god. 2026./2027., u obliku kalendara na koje se studenti mogu pretplatiti.
 
@@ -12,7 +12,7 @@ Svaka godina studija ima jednu .ics datoteku:
 |---|---|
 | `pds-1g.ics`, `pds-2g.ics`, `pds-3g.ics` | Preddiplomski, 1.–3. godina |
 | `ds-red-1g.ics`, `ds-red-2g.ics` | Diplomski redovni, 1.–2. godina |
-| `ds-izv-1g.ics`, `ds-izv-2g.ics` | Diplomski izvanredni (kad bude objavljen) |
+| `ds-izv-1g.ics`, `ds-izv-2g.ics` | Diplomski izvanredni, 1.–2. godina |
 | `dok-1g.ics`, `dok-2g.ics` | Doktorski (kad bude objavljen) |
 
 Datoteke se generiraju iz izvoza rasporeda i ne uređuju se ručno.

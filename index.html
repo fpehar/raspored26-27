@@ -139,14 +139,19 @@
 <main>
   <header>
     <h1>Raspored nastave</h1>
-    <h2 >Odjel za informacijske znanosti i tehnologije, akad. god. 2026./2027.</h2>
+    <p class="dept">Odjel za informacijske znanosti i tehnologije, akad. god. 2026./2027.</p>
     <p class="lead">Pretplatite se jednom na kalendar svoje godine. Kad se raspored promijeni, promjena sama stiže u vaš kalendar.</p>
   </header>
 
-
+  <!--
+    Kako dodati ili ukloniti kalendar:
+    - Svaki redak <li class="cal"> ima data-file (ime .ics datoteke u istoj mapi) i data-label (za čitače zaslona).
+    - Adrese i webcal:// poveznice stranica sama slaže iz data-file, pa radi i ako se promijeni adresa (domena).
+    - Kad datoteka postoji u repozitoriju, izbrišite oznake komentara oko odgovarajućeg bloka.
+  -->
 
   <section aria-labelledby="h-pds">
-    <h2 class="group" id="h-pds">Prijediplomski studij</h2>
+    <h2 class="group" id="h-pds">Preddiplomski studij</h2>
     <ul class="cals">
       <li class="cal" data-file="pds-1g.ics" data-label="Preddiplomski studij, 1. godina">
         <span class="year"><b>1.</b> <span>godina</span></span>
@@ -192,7 +197,6 @@
     </ul>
   </section>
 
-  <!--
   <section aria-labelledby="h-dsizv">
     <h2 class="group" id="h-dsizv">Diplomski studij, izvanredni</h2>
     <ul class="cals">
@@ -213,6 +217,7 @@
     </ul>
   </section>
 
+  <!--
   <section aria-labelledby="h-dok">
     <h2 class="group" id="h-dok">Doktorski studij</h2>
     <ul class="cals">
